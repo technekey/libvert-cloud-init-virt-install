@@ -4,7 +4,13 @@ I have a simple shell script called virth-install-with-cloud-init.sh to automate
 The script is escpically helpful, when you want to spawn multiple VM with a pre-defined configuration in cloud-init form. TLDR, the script is a wrapper of what is described [HERE](https://technekey.com/create-virtual-machines-using-virt-installlibvert-with-cloud-init/).
  It takes < 1 minute to boot and configure using cloud-init if the image is already present on your machine. 
 ```
-bash  virth-install-with-cloud-init.sh   -n <VM-NAME>-f  </PATH/TO/CLOUD-INIT-FILE>   -i <CLOUD-IMAGE-DOWNLOAD-URL>  -c <NUMBER-OF-CPU> -m <MEMORY IN MB IN INTEGER> -d <DISK IN GIG WITH A G SUFFIX> -v <OS-VARIANT>
+bash  virth-install-with-cloud-init.sh -n <VM-NAME> \
+ -f  </PATH/TO/CLOUD-INIT-FILE> \
+ -i <CLOUD-IMAGE-DOWNLOAD-URL> \
+ -c <NUMBER-OF-CPU> \
+ -m <MEMORY IN MB IN INTEGER> \
+ -d <DISK IN GIG WITH A G SUFFIX> \
+ -v <OS-VARIANT>
 ```
 
 Example:
