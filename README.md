@@ -32,7 +32,7 @@ CPU:                                               2
 Memory                                             2048
 Disk:                                              60G
 Image Source:                                      https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img
-VM Disk Location:                                  /home/technekey/LIBVERT_VM_DISKS/LIBVERT_IMAGE_ubuntu22.04_NAME_kube-master-1_U1Ks8k
+VM Disk Location:                                  /home/technekey/LIBVERT_VM_DISKS/LIBVERT_IMAGE_ubuntu22.04_NAME_VM-1_U1Ks8k
 OS VARIANT:                                        ubuntu22.04
 =====================================================================================
 
@@ -50,9 +50,9 @@ Domain creation completed.
 Wed Jun 29 04:22:54 PM CDT 2022: [Info]: Waiting for Cloud init to complete.., ATTEMPT=1, MAX ATTEMPTS=10, Retrying in 60 seconds.
 Wed Jun 29 04:23:26 PM CDT 2022: [Info]: Waiting for Cloud init to complete.., ATTEMPT=2, MAX ATTEMPTS=10, Retrying in 60 seconds.
 Wed Jun 29 04:23:59 PM CDT 2022: [Info]: Waiting for Cloud init to complete.., ATTEMPT=3, MAX ATTEMPTS=10, Retrying in 60 seconds.
-Wed Jun 29 04:24:01 PM CDT 2022: [Info]: Cloud init instructions are successfully executed on the guest VM(kube-master-1)
+Wed Jun 29 04:24:01 PM CDT 2022: [Info]: Cloud init instructions are successfully executed on the guest VM(VM-1)
 Id:             13
-Name:           kube-master-1
+Name:           VM-1
 UUID:           libvirt-268fb9c6-b1fdd-4ed8-9504-d65a8bff0d26
 OS Type:        hvm
 State:          running
