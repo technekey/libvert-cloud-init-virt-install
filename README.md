@@ -16,7 +16,13 @@ bash  virth-install-with-cloud-init.sh -n <VM-NAME> \
 Example:
 
 ```
-bash  virth-install-with-cloud-init.sh   -n VM-1 -f  my-config.yml   -i https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img  -c 2 -m 2048 -d 60G -v ubuntu22.04
+bash  virth-install-with-cloud-init.sh   -n VM-1 \
+-f  my-config.yml \
+-i https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img \
+-c 2 \
+-m 2048 \
+-d 60G \
+-v ubuntu22.04
 ```
 
 Full Snipper of execution:
