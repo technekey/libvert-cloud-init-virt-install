@@ -1,0 +1,29 @@
+#cloud-config
+system_info:
+  default_user:
+    name: technekey
+    home: /home/technekey
+    sudo: ALL=(ALL) NOPASSWD:ALL
+password: mypass
+chpasswd: { expire: False }
+hostname: host-configured-by-cloud-init
+ssh_authorized_keys:
+- ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI-FAKE-FAKE-DELETE-THIS-ADD-YOURS
+
+
+# configure sshd to allow users logging in using password 
+# rather than just keys
+ssh_pwauth: True
+
+
+
+# list of packages to install
+package_upgrade: true
+packages:
+- nfs-common
+
+runcmd:
+- sudo systemctl enable iscsid
+- sudo systemctl start iscsid
+- sudo systemctl start apache2
+- ip addr show $(ip route get 1.1.1.1  |grep -oP 'dev\s+\K[^ ]+')  |grep -oP '^\s+inet\s+\K[^/]+' |tee /tmp/my-ip
