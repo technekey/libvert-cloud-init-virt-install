@@ -243,7 +243,7 @@ wait_for_cloud_init_run()
 CLOUD_INIT_WAIT_COUNTER=0
 while [ $CLOUD_INIT_WAIT_COUNTER -lt $CLOUD_INIT_WAIT_COUNTER_MAX ] ;do
         log_info "Waiting for Cloud init to complete.., ATTEMPT=$((CLOUD_INIT_WAIT_COUNTER +1)), MAX ATTEMPTS=${CLOUD_INIT_WAIT_COUNTER_MAX}, Retrying in 60 seconds."
-	if sudo virt-cat  -d $VM_NAME /var/log/syslog  2>&1 |grep -q  'Reached target Cloud-init target' ;then
+	if (sudo virt-cat  -d $VM_NAME  /var/lib/cloud/data/result.json 2>&1|| true) |grep -Pqoz '(?s)errors":\s+\[\]' ;then
 		log_info "Cloud init instructions are successfully executed on the guest VM($VM_NAME)"
                 virsh dominfo "$VM_NAME"
 	        return 0
@@ -279,4 +279,3 @@ main()
 # This is the entry point of this script.
 ########################################
 main
-
