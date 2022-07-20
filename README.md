@@ -1,3 +1,5 @@
+### DO NOT USE, WORK IN PROGREE AROUND IMAGE DOWNLOADING
+
 # libvert-cloud-init-virt-install
 I have a simple shell script called virth-install-with-cloud-init.sh to automate VM creation using virt-install/libvert with cloud-init.  This script use is limited for linux guest VM and for cloud images.  read more detail [HERE](https://technekey.com/create-virtual-machines-using-virt-installlibvert-with-cloud-init/)
 
